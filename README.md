@@ -1,7 +1,6 @@
 # itstep-automation
 # Test Framework (API, GUI)
 Java quickstart project for test automation, UI acceptance and API acceptance testing. Created with lessons learned from a IT courses.
-
 ### Tools
 * Maven
 * Testng
@@ -17,9 +16,9 @@ Java quickstart project for test automation, UI acceptance and API acceptance te
 Maven 3
 Java 1.8
 
-### To run all modules, navigate to terminal and run:
+ To run all modules, navigate to terminal and run:
 <code>mvn clean test<code>
-### To run api modules, navigate to terminal and run:
+ To run api modules, navigate to terminal and run:
 <code>mvn clean test -Dgroups=api<code>
-### To run ui modules, navigate to terminal and run:
+ To run ui modules, navigate to terminal and run:
 <code>mvn clean test -Dgroups=gui<code>
