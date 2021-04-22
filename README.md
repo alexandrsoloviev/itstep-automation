@@ -18,8 +18,8 @@ Maven 3
 Java 1.8
 
 ### To run all modules, navigate to terminal and run:
-<code> mvn clean test <code>
+<code>mvn clean test<code>
 ### To run api modules, navigate to terminal and run:
-<code> mvn clean test -Dgroups=api <code>
+<code>mvn clean test -Dgroups=api<code>
 ### To run ui modules, navigate to terminal and run:
-<code> mvn clean test -Dgroups=gui <code>
+<code>mvn clean test -Dgroups=gui<code>
