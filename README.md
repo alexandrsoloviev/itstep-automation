@@ -14,6 +14,7 @@ Java quickstart project for test automation, UI acceptance and API acceptance te
 
 ### In order to utilise this project you need to have the following installed locally:
 *Maven 3
+
 *Java 1.8
 
  ### To run all modules, navigate to terminal and run:
