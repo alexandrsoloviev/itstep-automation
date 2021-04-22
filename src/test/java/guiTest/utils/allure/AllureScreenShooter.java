@@ -1,4 +1,4 @@
-package guiTest.allure;
+package guiTest.utils.allure;
 
 import org.testng.ITestResult;
 import org.testng.internal.ExitCodeListener;

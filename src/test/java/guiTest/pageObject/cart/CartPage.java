@@ -1,6 +1,6 @@
 package guiTest.pageObject.cart;
 
-import guiTest.basePage.BasePage;
+import guiTest.pageObject.basePage.BasePage;
 import io.qameta.allure.Step;
 
 public class CartPage extends BasePage {

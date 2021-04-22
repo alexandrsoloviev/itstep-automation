@@ -1,6 +1,6 @@
-package guiTest.driver;
+package guiTest.utils.driver;
 
-import guiTest.properties.ConfProperties;
+import guiTest.utils.properties.ConfProperties;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -32,8 +32,8 @@ public class Driver {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
 
-               WebDriverManager.chromedriver().setup();
-             driver = new ChromeDriver();
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
 
         LOG.info("Driver initialization chrome");
         driver.manage().window().maximize();

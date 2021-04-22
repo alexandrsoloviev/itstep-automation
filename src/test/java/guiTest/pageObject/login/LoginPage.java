@@ -1,6 +1,6 @@
 package guiTest.pageObject.login;
 
-import guiTest.basePage.BasePage;
+import guiTest.pageObject.basePage.BasePage;
 import io.qameta.allure.Step;
 
 public class LoginPage extends BasePage {

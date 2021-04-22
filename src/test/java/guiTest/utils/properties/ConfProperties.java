@@ -1,4 +1,4 @@
-package guiTest.properties;
+package guiTest.utils.properties;
 
 import java.io.FileInputStream;
 import java.io.IOException;

@@ -1,15 +1,15 @@
 package guiTest.tests;
 
-import guiTest.allure.AllureScreenShooter;
-import guiTest.driver.Driver;
-import guiTest.listener.ListenerTest;
+import guiTest.utils.allure.AllureScreenShooter;
+import guiTest.utils.driver.Driver;
+import guiTest.utils.listener.ListenerTest;
 import guiTest.pageObject.cart.CartPage;
 import guiTest.pageObject.checkoutComplete.CheckoutCompletePage;
 import guiTest.pageObject.checkoutStepOne.CheckoutStepOnePage;
 import guiTest.pageObject.checkoutStepTwo.CheckoutStepTwoPage;
 import guiTest.pageObject.inventory.InventoryPage;
 import guiTest.pageObject.login.LoginPage;
-import guiTest.properties.ConfProperties;
+import guiTest.utils.properties.ConfProperties;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
@@ -30,36 +30,37 @@ public class SwagLabTest {
         LoginPage.authorization(ConfProperties.getProperty("MY_LOGIN"), ConfProperties.getProperty("MY_PASSWORD"));
     }
 
-    @Test(priority = 1,dependsOnMethods = {"authorizationTest"} ,groups = "gui")
-    public void inventoryTest(){
+    @Test(priority = 1, dependsOnMethods = {"authorizationTest"}, groups = "gui")
+    public void inventoryTest() {
         InventoryPage.addItemsToCart();
     }
 
 
-    @Test(priority = 1,dependsOnMethods = {"inventoryTest"},groups = "gui")
-    public void cartTest(){
+    @Test(priority = 1, dependsOnMethods = {"inventoryTest"}, groups = "gui")
+    public void cartTest() {
         CartPage.clickCheckoutButton();
     }
-    @Test(priority = 1,dependsOnMethods = {"cartTest"},groups = "gui")
-    public void checkOutStepOneTest(){
+
+    @Test(priority = 1, dependsOnMethods = {"cartTest"}, groups = "gui")
+    public void checkOutStepOneTest() {
         CheckoutStepOnePage.enterPersonalData(ConfProperties.getProperty("MY_FIRST_NAME"),
-                                              ConfProperties.getProperty("MY_LAST_NAME"),
-                                              ConfProperties.getProperty("POSTAL_CODE"));
+                ConfProperties.getProperty("MY_LAST_NAME"),
+                ConfProperties.getProperty("POSTAL_CODE"));
     }
 
 
-    @Test(priority = 1,dependsOnMethods = {"checkOutStepOneTest"},groups = "gui")
+    @Test(priority = 1, dependsOnMethods = {"checkOutStepOneTest"}, groups = "gui")
     public void checkOutStepTwoTest() {
         CheckoutStepTwoPage.clickFinishButton();
     }
 
-    @Test(priority = 1,dependsOnMethods = {"checkOutStepTwoTest"},groups = "gui")
+    @Test(priority = 1, dependsOnMethods = {"checkOutStepTwoTest"}, groups = "gui")
     public void checkOutCompleteTest() {
         CheckoutCompletePage.finishStep();
     }
 
-    @AfterTest (groups = "ui")
-    public void closeBrowser(){
+    @AfterTest(groups = "gui")
+    public void closeBrowser() {
         Driver.teardown();
     }
 
