@@ -28,6 +28,7 @@ public class SwagLabTest {
     @Test(priority = 1, groups = "gui")
     public void authorizationTest() {
         LoginPage.authorization(ConfProperties.getProperty("MY_LOGIN"), ConfProperties.getProperty("MY_PASSWORD"));
+
     }
 
     @Test(priority = 1, dependsOnMethods = {"authorizationTest"}, groups = "gui")

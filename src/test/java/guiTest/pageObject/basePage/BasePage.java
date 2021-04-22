@@ -3,12 +3,11 @@ package guiTest.pageObject.basePage;
 import guiTest.utils.driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 
 public class BasePage {
 
-    private static Actions actions = new Actions(Driver.getDriver());
+
 
     protected static WebElement initElement(By by) {
         return Driver.getDriver().findElement(by);
