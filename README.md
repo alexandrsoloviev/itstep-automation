@@ -16,9 +16,12 @@ Java quickstart project for test automation, UI acceptance and API acceptance te
 Maven 3
 Java 1.8
 
- To run all modules, navigate to terminal and run:
-<code>mvn clean test<code>
- To run api modules, navigate to terminal and run:
-<code>mvn clean test -Dgroups=api<code>
- To run ui modules, navigate to terminal and run:
-<code>mvn clean test -Dgroups=gui<code>
+ ### To run all modules, navigate to terminal and run:
+`mvn clean test`
+ ### To run api modules, navigate to terminal and run:
+`mvn clean test -Dgroups=api`
+ ### To run ui modules, navigate to terminal and run:
+`mvn clean test -Dgroups=gui`
+
+ 
+ 
