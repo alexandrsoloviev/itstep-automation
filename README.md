@@ -23,6 +23,9 @@ Java quickstart project for test automation, UI acceptance and API acceptance te
 * `mvn clean test -Dgroups=api`
  ### To run ui modules, navigate to terminal and run:
 * `mvn clean test -Dgroups=gui`
+ ### To run Allure report, navigate to terminal and run:
+* `mvn allure:serve`
+ 
 
  
  
